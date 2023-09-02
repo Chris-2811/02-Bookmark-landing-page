@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="path/to/fontawesome/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Bookmark | Landing Page</title>
+  </head>
+  <body class="overflow-x-hidden">
+    <!-- Header -->
+    <header id="header" class="mb-20 md:mb-[110px]">
+      <!-- Section Container -->
+      <div class="container mx-auto px-10 pt-14">
+        <div class="flex items-center justify-between">
+          <!-- Logo -->
+          <div class="z-30">
+            <img src="images/logo-bookmark.svg" alt="" id="logo" />
+          </div>
+          <!-- Nav and Button on Medium Screens -->
+          <div class="hidden items-center space-x-12 tracking-[1.5px] md:flex">
+            <nav class="flex space-x-11 text-sm uppercase text-dark-blue">
+              <a href="#features" class="hover:text-soft-red" id="features"
+                >Features</a
+              >
+              <a href="#" class="hover:text-soft-red" id="pricing">Pricing</a>
+              <a href="#newsletter" class="hover:text-soft-red" id="contact"
+                >Contact</a
+              >
+            </nav>
+            <button class="btn-secondary">Login</button>
+          </div>
+          <!-- Hamburger Menu -->
+          <img
+            src="images/icon-hamburger.svg"
+            alt=""
+            class="cursor-pointer md:hidden z-30 hamburger"
+            id="open"
+          />
+
+          <!-- Close Button -->
+          <img
+            src="images/icon-close.svg"
+            alt=""
+            id="close"
+            class="hidden z-30 cursor-pointer"
+          />
+        </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div
+        id="menu"
+        class="hidden fixed inset-0 z-20 flex-col items-center self-end w-full h-full min-h-screen px-6 py-1 pt-32 pb-4 tracking-widest text-white uppercase divide-y divide-gray-500 opacity-90 bg-dark-blue md:hidden"
+      >
+        <div class="w-full py-3 text-center">
+          <a href="#features" class="block hover:text-soft-red">Features</a>
+        </div>
+        <div class="w-full py-3 text-center">
+          <a href="#" class="block hover:text-soft-red">Pricing</a>
+        </div>
+        <div class="w-full py-3 text-center">
+          <a href="#" class="block hover:text-soft-red">Contact</a>
+        </div>
+        <div class="w-full py-3 text-center">
+          <a href="#" class="block hover:text-soft-red">Login</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+      <!-- Hero Section -->
+      <section id="hero">
+        <!-- Section Container -->
+        <div class="container mx-auto px-8 lg:pr-0">
+          <!-- Flex Container -->
+          <div
+            class="relative flex flex-col lg:flex-row-reverse lg:items-center text-center lg:text-left"
+          >
+            <!-- Image -->
+            <div class="relative mx-auto lg:mx-0 lg:mb-0 lg:w-1/2">
+              <div
+                class="bg-hero -z-10 absolute w-[1000px] h-[200px] bg-soft-blue rounded-l-full top-12 left-[30%]"
+              ></div>
+              <img
+                src="images/illustration-hero.svg"
+                alt=""
+                class="z-10 w-full"
+              />
+            </div>
+            <!-- Content -->
+            <div class="lg:w-1/2">
+              <h1
+                class="text-3xl text-dark-blue font-medium mt-24 lg:mt-0 leading-10 mb-4 md:mb-6 md:text-5xl lg:max-w-[540px]"
+              >
+                A Simple Bookmark Manager
+              </h1>
+              <p class="mb-8 lg:max-w-sm xl:max-w-[540px] mx-auto lg:mx-0">
+                A clean and simple interface to organize your favourite
+                websites. Open a new browser tab and see your sites load
+                instantly. Try it for free.
+              </p>
+              <!-- Buttons -->
+              <div
+                class="flex space-x-4 justify-center items-center lg:justify-start"
+              >
+                <a class="btn-primary px-4 md:px-6">Get it on Chrome</a>
+                <a class="btn-light px-4 md:px-6">Get it on Firefox</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Features -->
+      <section id="features" class="mt-[150px]">
+        <div class="container mx-auto px-8 text-center">
+          <h3>Features</h3>
+          <p class="max-w-[540px] mx-auto">
+            Our aim is to make it quick and easy for you to access your
+            favourite websites. Your bookmarks sync between your devices so you
+            can access them on the go.
+          </p>
+
+          <!-- Tabs -->
+          <div
+            class="flex flex-col mt-10 lg:mt-20 lg:flex-row lg:max-w-[730px] lg:space-x-14 lg:mb-16 mx-auto lg:border-b lg:pb-3 lg:justify-around"
+          >
+            <!-- Tab 1 -->
+            <div
+              class="tab relative py-5 border-b border-t text-dark-blue opacity-75 leading-[17px] tracking-wide cursor-pointer lg:border-0"
+              data-target="panel-1"
+              id="bookmark"
+            >
+              Simple Bookmarking
+              <div
+                class="absolute h-1 bg-soft-red w-36 bottom-0 left-[50%] -translate-x-[50%] lg:w-[243px] lg:-bottom-[14px]"
+              ></div>
+            </div>
+            <!-- Tab 2 -->
+            <div
+              class="tab relative py-5 border-b border-t text-dark-blue opacity-75 leading-[17px] tracking-wide cursor-pointer lg:border-0"
+              id="searching"
+              data-target="panel-2"
+            >
+              Speedy Searching
+              <div
+                class="hidden absolute h-1 bg-soft-red w-32 lg:w-[243px] bottom-0 left-[50%] -translate-x-[50%] lg:-bottom-[14px]"
+              ></div>
+            </div>
+            <!-- Tab 3 -->
+            <div
+              class="tab relative py-5 border-b border-t text-dark-blue opacity-75 leading-[17px] tracking-wide cursor-pointer lg:border-0"
+              id="sharing"
+              data-target="panel-3"
+            >
+              Easy Sharing
+              <div
+                class="hidden absolute h-1 bg-soft-red w-20 bottom-0 left-[50%] -translate-x-[50%] lg:w-[243px] lg:-bottom-[14px]"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Panels -->
+
+          <div id="panels">
+            <!-- Bookmark -->
+            <div
+              class="flex flex-col mt-16 panel panel-1 lg:flex-row lg:items-center lg:space-x-14"
+              id="bookmark-content"
+            >
+              <!-- Image -->
+              <div class="relative mx-auto lg:mx-0 lg:mb-0 lg:w-1/2">
+                <div
+                  class="bg-features -z-10 absolute w-[1000px] h-[200px] bg-soft-blue top-10 rounded-r-full right-[30%]"
+                ></div>
+                <img
+                  src="images/illustration-features-tab-1.svg"
+                  alt=""
+                  class="z-10"
+                />
+              </div>
+              <!-- Content -->
+              <div class="lg:w-1/2 lg:text-left">
+                <h3 class="mt-16 lg:mt-0">Bookmark in one click</h3>
+                <p class="max-w-[445px]">
+                  Organize your bookmarks however you like. Our simple
+                  drag-and-drop interface gives you complete control over how
+                  you manage your favourite sites.
+                </p>
+                <a
+                  href="#"
+                  class="inline-block btn-primary mt-4 px-6 lg:mt-8 hover:bg-soft-blue hover:text-white"
+                  >More Info</a
+                >
+              </div>
+            </div>
+            <!-- Searching -->
+            <div
+              class="flex hidden flex-col mt-16 panel panel-2 lg:flex-row lg:items-center lg:space-x-14"
+              id="searching-content"
+            >
+              <!-- Image -->
+              <div class="relative mx-auto lg:mx-0 lg:mb-0 lg:w-1/2">
+                <div
+                  class="bg-features -z-10 absolute w-[1000px] h-[200px] bg-soft-blue top-10 rounded-r-full right-[30%]"
+                ></div>
+                <img
+                  src="images/illustration-features-tab-2.svg"
+                  alt=""
+                  class="z-10"
+                />
+              </div>
+              <!-- Content -->
+              <div class="lg:w-1/2 lg:text-left">
+                <h3 class="mt-16 lg:mt-0">Intelligent search</h3>
+                <p class="max-w-[445px]">
+                  Our powerful search feature will help you find saved sites in
+                  no time at all. No need to trawl through all of your
+                  bookmarks.
+                </p>
+                <a
+                  href="#"
+                  class="inline-block btn-primary mt-4 px-6 lg:mt-8 hover:bg-soft-blue hover:text-white"
+                  >More Info</a
+                >
+              </div>
+            </div>
+            <!-- Easy Sharing -->
+            <div
+              class="flex hidden flex-col mt-16 panel panel-3 lg:flex-row lg:items-center lg:space-x-14"
+              id="sharing-content"
+            >
+              <!-- Image -->
+              <div class="relative mx-auto lg:mx-0 lg:mb-0 lg:w-1/2">
+                <div
+                  class="bg-features -z-10 absolute w-[1000px] h-[200px] bg-soft-blue top-10 rounded-r-full right-[30%]"
+                ></div>
+                <img
+                  src="images/illustration-features-tab-3.svg"
+                  alt=""
+                  class="z-10"
+                />
+              </div>
+              <!-- Content -->
+              <div class="lg:w-1/2 lg:text-left">
+                <h3 class="mt-16 lg:mt-0">Share your bookmarks</h3>
+                <p class="max-w-[445px]">
+                  Easily share your bookmarks and collections with others.
+                  Create a shareable link that you can send at the click of a
+                  button.
+                </p>
+                <a
+                  href="#"
+                  class="inline-block btn-primary mt-4 px-6 lg:mt-8 hover:bg-soft-blue hover:text-white"
+                  >More Info</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Download -->
+      <section id="download">
+        <!-- Section Container -->
+        <div
+          class="container flex flex-col items-center mx-auto text-center mt-16 px-12 lg:mt-[238px] mb-[140px]"
+        >
+          <!-- Section Header -->
+          <div class="mb-10 lg:mb-12">
+            <h3>Download the extension</h3>
+            <p class="max-w-[540px] mx-auto">
+              We’ve got more browsers in the pipeline. Please do let us know if
+              you’ve got a favourite you’d like us to prioritize.
+            </p>
+          </div>
+
+          <!-- Cards -->
+          <div
+            class="flex flex-col space-y-10 lg:space-y-0 lg:space-x-9 lg:flex-row"
+          >
+            <!-- Card 1 -->
+            <div class="card">
+              <!-- Card Top -->
+              <div class="card-top w-full py-12 pb-8 border-b-4 border-dotted">
+                <img src="images/logo-chrome.svg" alt="" class="mx-auto mb-8" />
+                <h4>Add to Chrome</h4>
+                <p>Minimum version 6.2</p>
+              </div>
+              <!-- Card Bottom -->
+              <div class="card-bottom p-6 text-sm">
+                <a href="#" class="btn-primary w-full px-8"
+                  >Add & Install Extension</a
+                >
+              </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="card translate-y-10">
+              <!-- Card Top -->
+              <div class="card-top w-full py-12 pb-8 border-b-4 border-dotted">
+                <img
+                  src="images/logo-firefox.svg"
+                  alt=""
+                  class="mx-auto mb-8"
+                />
+                <h4>Add to Chrome</h4>
+                <p>Minimum version 6.2</p>
+              </div>
+              <!-- Card Bottom -->
+              <div class="card-bottom p-6">
+                <a href="#" class="btn-primary w-full text-sm px-8"
+                  >Add & Install Extension</a
+                >
+              </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="card translate-y-20">
+              <!-- Card Top -->
+              <div class="card-top w-full py-12 pb-8 border-b-4 border-dotted">
+                <img src="images/logo-opera.svg" alt="" class="mx-auto mb-8" />
+                <h4>Add to Opera</h4>
+                <p>Minimum version 6.2</p>
+              </div>
+              <!-- Card Bottom -->
+              <div class="card-bottom p-6 text-sm">
+                <a href="#" class="btn-primary w-full px-8"
+                  >Add & Install Extension</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section FAQ -->
+      <section id="faq">
+        <!-- Section Container -->
+        <div class="container text-center px-8 mx-auto">
+          <!-- Section Header -->
+          <div class="mb-16">
+            <h3>Frequently Asked Questions</h3>
+            <p class="max-w-[540px] mx-auto">
+              Here are some of our FAQs. If you have any other questions you’d
+              like answered please feel free to email us.
+            </p>
+          </div>
+
+          <!-- Accordion -->
+          <div id="accordion">
+            <!-- Accordion Container -->
+            <div class="max-w-2xl mx-auto px-8 m-8 overflow-hidden">
+              <!-- Tab 1 -->
+              <div class="py-1 border-b outline-none group" tabindex="1">
+                <!-- Tab Flex Container -->
+                <div
+                  class="flex justify-between items-center py-3 text-dark-blue transition duration-500 cursor-pointer group ease"
+                >
+                  <!-- Tab Title -->
+                  <div
+                    class="transition duration-500 ease group-hover:text-soft-red"
+                  >
+                    What is bookmark
+                  </div>
+
+                  <!-- Tab Arrow -->
+                  <div
+                    class="arrow transition duration-500 ease group-focus:text-soft-red"
+                  >
+                    <img src="images/icon-arrow.svg" alt="" />
+                  </div>
+                </div>
+
+                <!-- Tab Inner Content -->
+                <div
+                  class="hidden content overflow-hidden transition duration-500"
+                >
+                  <p class="text-justify">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Tempore quibusdam eveniet ipsa veniam optio dolore quam sed
+                    quae ipsam, odit deserunt numquam vel. Optio exercitationem
+                    accusantium tempora, similique laborum repellat!
+                  </p>
+                </div>
+              </div>
+              <!-- Tab 2 -->
+              <div class="py-1 border-b outline-none group" tabindex="1">
+                <!-- Tab Flex Container -->
+                <div
+                  class="flex justify-between items-center py-3 text-dark-blue transition duration-500 cursor-pointer group ease"
+                >
+                  <!-- Tab Title -->
+                  <div
+                    class="transition duration-500 ease group-hover:text-soft-red"
+                  >
+                    How can I request a new browser?
+                  </div>
+
+                  <!-- Tab Arrow -->
+                  <div
+                    class="arrow transition duration-500 ease group-focus:text-soft-red"
+                  >
+                    <img src="images/icon-arrow.svg" alt="" />
+                  </div>
+                </div>
+
+                <!-- Tab Inner Content -->
+                <div class="hidden overflow-hidden transition duration-500">
+                  <p class="text-justify">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Tempore quibusdam eveniet ipsa veniam optio dolore quam sed
+                    quae ipsam, odit deserunt numquam vel. Optio exercitationem
+                    accusantium tempora, similique laborum repellat!
+                  </p>
+                </div>
+              </div>
+              <!-- Tab 3 -->
+              <div class="py-1 border-b outline-none group" tabindex="1">
+                <!-- Tab Flex Container -->
+                <div
+                  class="flex justify-between items-center py-3 text-dark-blue transition duration-500 cursor-pointer group ease"
+                >
+                  <!-- Tab Title -->
+                  <div
+                    class="transition duration-500 ease group-hover:text-soft-red"
+                  >
+                    I there a mobile app?
+                  </div>
+
+                  <!-- Tab Arrow -->
+                  <div
+                    class="arrow transition duration-500 ease group-focus:text-soft-red"
+                  >
+                    <img src="images/icon-arrow.svg" alt="" />
+                  </div>
+                </div>
+
+                <!-- Tab Inner Content -->
+                <div class="hidden overflow-hidden transition duration-500">
+                  <p class="text-justify">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Tempore quibusdam eveniet ipsa veniam optio dolore quam sed
+                    quae ipsam, odit deserunt numquam vel. Optio exercitationem
+                    accusantium tempora, similique laborum repellat!
+                  </p>
+                </div>
+              </div>
+              <!-- Tab 4 -->
+              <div class="py-1 border-b outline-none group" tabindex="1">
+                <!-- Tab Flex Container -->
+                <div
+                  class="flex justify-between items-center py-3 text-dark-blue transition duration-500 cursor-pointer group ease"
+                >
+                  <!-- Tab Title -->
+                  <div
+                    class="transition duration-500 ease group-hover:text-soft-red"
+                  >
+                    What about other Chromium browsers?
+                  </div>
+
+                  <!-- Tab Arrow -->
+                  <div
+                    class="arrow transition duration-500 ease group-focus:text-soft-red"
+                  >
+                    <img src="images/icon-arrow.svg" alt="" />
+                  </div>
+                </div>
+
+                <!-- Tab Inner Content -->
+                <div class="hidden overflow-hidden transition duration-500">
+                  <p class="text-justify">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Tempore quibusdam eveniet ipsa veniam optio dolore quam sed
+                    quae ipsam, odit deserunt numquam vel. Optio exercitationem
+                    accusantium tempora, similique laborum repellat!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a
+            href="#"
+            class="inline-block btn-primary mt-12 px-6 mb-[123px] lg:mb-[150px] lg:mt-8 hover:bg-soft-blue hover:text-white"
+            >More Info</a
+          >
+        </div>
+      </section>
+
+      <!-- Newsletter -->
+      <section id="newsletter" class="bg-soft-blue">
+        <!-- Section Containter -->
+        <div class="container mx-auto text-center px-8 pt-14 pb-8 text-white">
+          <div class="text-sm tracking-[4.6px] leading-[40px] uppercase">
+            35.000 Already joined
+          </div>
+          <h4 class="text-2xl leading-[28px]">
+            Stay up-to-date with wyhat we're doing
+          </h4>
+
+          <!-- Form -->
+          <form action="" id="form">
+            <div
+              class="flex flex-col justify-center mt-8 lg:flex-row lg:items-start lg:space-x-4"
+            >
+              <div class="form-control relative">
+                <img
+                  src="images/icon-error.svg"
+                  alt=""
+                  class="invisible absolute right-3 top-[14px]"
+                />
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="example@email/com"
+                  class="py-3 px-5 w-full rounded-md text-dark-blue placeholder:text-dark-blue"
+                />
+                <small class="ml-3 invisible" id="message">
+                  Whoops, make sure it's an email</small
+                >
+              </div>
+              <button type="submit" class="btn-secondary text-sm">
+                Contact Us
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-dark-blue">
+      <!-- Footer Container -->
+      <div class="container mx-auto px-8 py-10 text-white">
+        <!-- Flex Container -->
+        <div class="flex flex-col items-center lg:flex-row lg:space-x-16">
+          <div class="z-30">
+            <img src="images/logo-bookmark-light.svg" alt="" />
+          </div>
+          <div class="lg:flex lg:justify-between lg:flex-1">
+            <nav
+              class="flex flex-col space-y-8 mt-10 text-[15px] items-center lg:space-x-12 lg:mt-0 lg:space-y-0 lg:flex-row lg:text-sm"
+            >
+              <a href="#" class="uppercase tracking-[1.5px] hover:text-soft-red"
+                >Features</a
+              >
+              <a href="#" class="uppercase tracking-[1.5px] hover:text-soft-red"
+                >Pricing</a
+              >
+              <a href="#" class="uppercase tracking-[1.5px] hover:text-soft-red"
+                >Contact</a
+              >
+            </nav>
+            <div class="flex space-x-10 mt-12 lg:mt-0">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                class="group cursor-pointer"
+              >
+                <path
+                  class="group-hover:fill-soft-red"
+                  fill="#FFF"
+                  fill-rule="evenodd"
+                  d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                class="group cursor-pointer"
+              >
+                <path
+                  fill="#FFF"
+                  fill-rule="evenodd"
+                  class="group-hover:fill-soft-red"
+                  d="M24 2.557a9.83 9.83 0 0 1-2.828.775A4.932 4.932 0 0 0 23.337.608a9.864 9.864 0 0 1-3.127 1.195A4.916 4.916 0 0 0 16.616.248c-3.179 0-5.515 2.966-4.797 6.045A13.978 13.978 0 0 1 1.671 1.149a4.93 4.93 0 0 0 1.523 6.574 4.903 4.903 0 0 1-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 0 1-2.224.084 4.928 4.928 0 0 0 4.6 3.419A9.9 9.9 0 0 1 0 17.54a13.94 13.94 0 0 0 7.548 2.212c9.142 0 14.307-7.721 13.995-14.646A10.025 10.025 0 0 0 24 2.557z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>

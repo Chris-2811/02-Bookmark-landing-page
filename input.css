@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn-primary {
+  background-color: #5267df;
+  color: white;
+  display: inline-block;
+  border-radius: 5px;
+  padding-block: 6px;
+  border-radius: 5px;
+  border: 2px solid #5267df;
+  box-shadow: 0px 8px 8px -4px rgba(73, 93, 207, 0.2);
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  color: #5267df;
+}
+
+.btn-secondary {
+  background-color: #fa5959;
+  border: 2px solid #fa5959;
+  color: white;
+  line-height: 28px;
+  padding-inline: 24px;
+  padding-block: 8px;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+.btn-secondary:hover {
+  background-color: white;
+  color: #fa5959;
+}
+
+.btn-light {
+  background-color: #f7f7f7;
+  color: #242a45;
+  padding-block: 6px;
+  font-weight: 500;
+  opacity: 0.75;
+  border: 2px solid #f7f7f7;
+  border-radius: 5px;
+  box-shadow: 0px 8px 8px -4px rgba(73, 93, 207, 0.2);
+  cursor: pointer;
+}
+
+.btn-light:hover {
+  background-color: transparent;
+  border: 2px solid #5b6074;
+}
+
+.card {
+  box-shadow: 0px 10px 20px -5px rgba(73, 93, 207, 0.2);
+  text-align: center;
+  border-radius: 15px;
+}
+
+.form-control.error {
+  @apply bg-soft-red rounded-md text-left pb-2 mb-4 border-2 border-soft-red;
+}
+
+.form-control.error > img {
+  visibility: visible;
+}
+
+.arrow.rotate {
+  transform: rotate(180deg);
+}
+
+@layer base {
+  p {
+    @apply text-[15px] opacity-50 leading-[25px] text-dark-blue md:text-lg md:leading-[28px];
+  }
+}
+
+@layer base {
+  h3 {
+    @apply text-2xl font-medium leading-[52px] text-dark-blue lg:text-[32px];
+  }
+}
+
+@media (min-width: 480px) {
+  .bg-hero {
+    width: 2000px;
+    height: 200px;
+    left: 30%;
+    @apply absolute rounded-l-full bg-soft-blue top-20;
+  }
+
+  .bg-features {
+    width: 2000px;
+    height: 200px;
+    right: 30%;
+    @apply absolute rounded-l-full bg-soft-blue top-24;
+  }
+}
+@media (min-width: 768px) {
+  .bg-hero {
+    width: 2000px;
+    height: 300px;
+    left: 30%;
+    @apply absolute rounded-l-full bg-soft-blue top-36;
+  }
+  .bg-features {
+    width: 2000px;
+    height: 300px;
+    right: 30%;
+    @apply absolute rounded-l-full bg-soft-blue top-24;
+  }
+}
+@media (min-width: 1020px) {
+  .bg-hero {
+    width: 2000px;
+    height: 200px;
+    left: 30%;
+    @apply absolute rounded-l-full bg-soft-blue top-32;
+  }
+  .bg-features {
+    width: 2000px;
+    height: 200px;
+    right: 30%;
+    @apply absolute rounded-l-full bg-soft-blue top-32;
+  }
+}
+@media (min-width: 1440px) {
+  .bg-hero {
+    width: 2000px;
+    height: 300px;
+    left: 30%;
+    @apply absolute rounded-l-full bg-soft-blue top-40;
+  }
+  .bg-features {
+    width: 2000px;
+    height: 300px;
+    right: 40%;
+    @apply absolute rounded-l-full bg-soft-blue top-32;
+  }
+}
